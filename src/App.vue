@@ -1,13 +1,9 @@
 <template>
   <div>
-    <h1>xiba</h1>
+    <el-button>按钮</el-button>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>
