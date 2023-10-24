@@ -17,11 +17,11 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-#                    硅谷甄选运营平台
+# 硅谷甄选运营平台
 
 此次教学课程为硅谷甄选运营平台项目,包含运营平台项目模板从0到1开发，以及数据大屏幕、权限等业务。
 
-此次教学课程涉及到技术栈包含***:vue3+TypeScript+vue-router+pinia+element-plus+axios+echarts***等技术栈。
+此次教学课程涉及到技术栈包含**_:vue3+TypeScript+vue-router+pinia+element-plus+axios+echarts_**等技术栈。
 
 ## 一、vue3组件通信方式
 
@@ -95,7 +95,6 @@ let props = defineProps(["info",'money']);
  </pre>
 ```
 
-
 当前代码级给pre标签绑定原生DOM事件点击事件,默认会给事件回调注入event事件对象。当然点击事件想注入多个参数可以按照下图操作。但是切记注入的事件对象务必叫做$event.
 
 ```
@@ -152,8 +151,6 @@ const handler = () => {
 let $emit = defineEmits(["xxx",'click']);
 ```
 
-
-
 ### 1.3全局事件总线
 
 全局事件总线可以实现任意组件通信，在vue2中可以根据VM与VC关系推出全局事件总线。
@@ -186,8 +183,6 @@ v-model指令可是收集表单数据(数据双向绑定)，除此之外它也�
 <Child v-model:pageNo="msg" v-model:pageSize="msg1"></Child>
 ```
 
-
-
 ### 1.5useAttrs
 
 在Vue3中可以利用useAttrs方法获取组件的属性与事件(包含:原生DOM事件或者自定义事件),次函数功能类似于Vue2框架中$attrs属性与$listeners方法。
@@ -207,11 +202,7 @@ let $attrs = useAttrs();
 </script>
 ```
 
-
-
 ### 1.6ref与$parent
-
-
 
 ref,提及到ref可能会想到它可以获取元素的DOM或者获取子组件实例的VC。既然可以在父组件内部通过ref获取子组件实例VC，那么子组件内部的方法与响应式数据父组件可以使用的。
 
@@ -433,7 +424,7 @@ let todos = ref([
 
 #### 2.1.1环境准备
 
-- node v16.14.2 
+- node v16.14.2
 - pnpm 8.0.0
 
 #### 2.1.2初始化项目
@@ -483,12 +474,12 @@ npx eslint --init
 ```
 module.exports = {
    //运行环境
-    "env": { 
+    "env": {
         "browser": true,//浏览器端
         "es2021": true,//es2021
     },
     //规则继承
-    "extends": [ 
+    "extends": [
        //全部规则默认是关闭的,这个配置项开启推荐规则,推荐规则参照文档
        //比如:函数不能重名、对象不能出现重复key
         "eslint:recommended",
@@ -876,7 +867,7 @@ module.exports = {
 配置husky
 
 ```
-npx husky add .husky/commit-msg 
+npx husky add .husky/commit-msg
 ```
 
 在生成的commit-msg文件中添加下面的命令
@@ -934,14 +925,12 @@ pnpm install element-plus @element-plus/icons-vue
 ```
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css'
-//@ts-ignore忽略当前文件ts类型的检测否则有红色提示(打包会失败) 
+//@ts-ignore忽略当前文件ts类型的检测否则有红色提示(打包会失败)
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 app.use(ElementPlus, {
     locale: zhCn
 })
 ```
-
-
 
 **Element Plus全局组件类型声明**
 
@@ -984,7 +973,7 @@ export default defineConfig({
   "compilerOptions": {
     "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
     "paths": { //路径映射，相对于baseUrl
-      "@/*": ["src/*"] 
+      "@/*": ["src/*"]
     }
   }
 }
@@ -1432,4 +1421,3 @@ echarts:国内镜像网站
 https://www.isqqw.com/echarts-doc/zh/option.html#title
 
 http://datav.aliyun.com/portal/school/atlas/area_selector
-
